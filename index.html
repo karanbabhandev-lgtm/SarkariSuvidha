@@ -281,6 +281,226 @@ Our Services
 </div>
 
 </section>
+  ```html
+<!-- ================= CUSTOMER TRUST ================= -->
+
+<section class="customer-trust">
+
+    <div class="trust-container">
+
+        <div class="trust-badge">
+            ⭐ CUSTOMER TRUST
+        </div>
+
+        <h2>
+            आपका भरोसा, हमारी जिम्मेदारी
+        </h2>
+
+        <p class="trust-intro">
+            Sarkari Suvidha का उद्देश्य सरकारी ऑनलाइन सेवाओं को
+            आसान, सुविधाजनक और समझने योग्य बनाना है।
+            सही जानकारी और उचित मार्गदर्शन के लिए आप हमसे संपर्क कर सकते हैं।
+        </p>
+
+        <div class="trust-cards">
+
+            <div class="trust-card">
+                <div class="trust-icon">⭐</div>
+                <h3>Customer Satisfaction</h3>
+                <p>
+                    हमारा लक्ष्य है कि हर ग्राहक को बेहतर
+                    सेवा और संतोषजनक सहायता मिले।
+                </p>
+            </div>
+
+            <div class="trust-card">
+                <div class="trust-icon">🔒</div>
+                <h3>Safe & Secure Guidance</h3>
+                <p>
+                    सरकारी सेवाओं के लिए सही प्रक्रिया और
+                    आवश्यक जानकारी समझने में सहायता।
+                </p>
+            </div>
+
+            <div class="trust-card">
+                <div class="trust-icon">🤝</div>
+                <h3>Personal Assistance</h3>
+                <p>
+                    आवेदन प्रक्रिया के दौरान जरूरत के अनुसार
+                    व्यक्तिगत सहायता और मार्गदर्शन।
+                </p>
+            </div>
+
+        </div>
+
+        <div class="trust-bottom">
+
+            <h3>
+                अपना सरकारी ऑनलाइन काम करवाना है?
+            </h3>
+
+            <p>
+                Aadhaar • PAN • Voter ID • Ayushman Card • Ration Card
+                • PM-KISAN और अन्य ऑनलाइन सेवाओं के लिए हमसे संपर्क करें।
+            </p>
+
+            <a href="https://wa.me/918002268565"
+               target="_blank"
+               class="trust-btn">
+                💬 अभी WhatsApp पर संपर्क करें
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+और इसे professional look देने के लिए अपनी `style.css` के **सबसे नीचे** यह CSS जोड़ें:
+
+```css
+/* ================= CUSTOMER TRUST ================= */
+
+.customer-trust {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f5f9ff, #eef5ff);
+    text-align: center;
+}
+
+.trust-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.trust-badge {
+    display: inline-block;
+    background: #ffffff;
+    color: #1769aa;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 18px;
+}
+
+.customer-trust h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #12345b;
+}
+
+.trust-intro {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.trust-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.trust-card {
+    background: #ffffff;
+    padding: 30px 22px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border: 1px solid #e8eef5;
+}
+
+.trust-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.trust-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.trust-card h3 {
+    color: #12345b;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.trust-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.trust-bottom {
+    margin-top: 45px;
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.trust-bottom h3 {
+    font-size: 25px;
+    color: #12345b;
+    margin-bottom: 10px;
+}
+
+.trust-bottom p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.trust-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #ffffff;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.trust-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .customer-trust {
+        padding: 50px 15px;
+    }
+
+    .customer-trust h2 {
+        font-size: 27px;
+    }
+
+    .trust-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .trust-card {
+        padding: 25px 20px;
+    }
+
+    .trust-bottom h3 {
+        font-size: 21px;
+    }
+
+}
+```
+
 
 <!-- ================= ABOUT ================= -->
 
