@@ -1,6 +1,5 @@
 /* =========================================================
-   SARKARI SUVIDHA
-   MAIN JAVASCRIPT
+   SARKARI SUVIDHA - SCRIPT
    ========================================================= */
 
 
@@ -10,28 +9,24 @@ let slideIndex = 0;
 
 function showSlides() {
 
-    let slides =
+    const slides =
         document.getElementsByClassName("slides");
 
+    if (slides.length === 0) {
+        return;
+    }
+
     for (let i = 0; i < slides.length; i++) {
-
         slides[i].style.display = "none";
-
     }
 
     slideIndex++;
 
     if (slideIndex > slides.length) {
-
         slideIndex = 1;
-
     }
 
-    if (slides.length > 0) {
-
-        slides[slideIndex - 1].style.display = "block";
-
-    }
+    slides[slideIndex - 1].style.display = "block";
 
     setTimeout(showSlides, 3500);
 }
@@ -50,15 +45,15 @@ if (searchBox) {
         "input",
         function () {
 
-            let searchValue =
+            const searchValue =
                 this.value.toLowerCase().trim();
 
-            let cards =
+            const cards =
                 document.querySelectorAll(".card");
 
             cards.forEach(function (card) {
 
-                let text =
+                const text =
                     card.innerText.toLowerCase();
 
                 if (
@@ -82,7 +77,9 @@ if (searchBox) {
 }
 
 
-/* ================= SCROLL ANIMATION ================= */
+/* =========================================================
+   SCROLL ANIMATION CONTROL
+   ========================================================= */
 
 let scrollTimer;
 
@@ -90,22 +87,21 @@ window.addEventListener(
     "scroll",
     function () {
 
-        /*
-           User scroll कर रहा है
-           इसलिए animations pause
-        */
+        /* Scroll करते ही animation रोकें */
 
         document.body.classList.add(
             "is-scrolling"
         );
 
 
+        /* पुराना timer हटाएं */
+
         clearTimeout(scrollTimer);
 
 
         /*
            Scroll रुकने के 900ms बाद
-           animation फिर शुरू
+           animation फिर शुरू होगी
         */
 
         scrollTimer = setTimeout(
@@ -126,31 +122,36 @@ window.addEventListener(
 );
 
 
-/* ================= BACK TO TOP ================= */
+/* =========================================================
+   BACK TO TOP BUTTON
+   ========================================================= */
 
 const topBtn =
     document.getElementById("topBtn");
 
 
-window.addEventListener(
-    "scroll",
-    function () {
-
-        if (window.scrollY > 400) {
-
-            topBtn.style.display = "block";
-
-        } else {
-
-            topBtn.style.display = "none";
-
-        }
-
-    }
-);
-
-
 if (topBtn) {
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (window.scrollY > 400) {
+
+                topBtn.style.display = "block";
+
+            } else {
+
+                topBtn.style.display = "none";
+
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
+
 
     topBtn.addEventListener(
         "click",
@@ -170,7 +171,9 @@ if (topBtn) {
 }
 
 
-/* ================= PAGE LOAD ================= */
+/* =========================================================
+   PAGE LOAD
+   ========================================================= */
 
 window.addEventListener(
     "load",
