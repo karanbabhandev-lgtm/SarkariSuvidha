@@ -1924,3 +1924,672 @@ footer {
     }
 
 }
+/* =========================================================
+   ABOUT + CONTACT PAGE DESIGN
+   ========================================================= */
+
+/* ---------- PAGE HERO ---------- */
+
+.about-page-hero,
+.contact-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 20px;
+    text-align: center;
+    color: #fff;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.12), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,.10), transparent 25%),
+        linear-gradient(135deg, #d90000, #850000);
+}
+
+.about-page-hero::before,
+.contact-page-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+
+    left: -120px;
+    top: -140px;
+
+    animation: pageCircle 8s linear infinite;
+}
+
+.about-page-hero::after,
+.contact-page-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -170px;
+
+    animation: pageCircle 10s linear infinite reverse;
+}
+
+@keyframes pageCircle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.about-page-hero h1,
+.contact-page-hero h1 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.about-page-hero p,
+.contact-page-hero p {
+    position: relative;
+    z-index: 2;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.page-badge {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+
+    padding: 9px 20px;
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.35);
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-page {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+}
+
+.about-main-card {
+    background: #fff;
+
+    padding: 45px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#fff,#fff) padding-box,
+        linear-gradient(
+            135deg,
+            rgba(255,0,0,.25),
+            rgba(255,170,0,.15)
+        ) border-box;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+    margin-bottom: 35px;
+
+    transition: .35s;
+}
+
+.about-main-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+}
+
+.about-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #fff4f4;
+
+    border-radius: 50%;
+
+    font-size: 38px;
+}
+
+.about-main-card h2 {
+    font-size: 30px;
+
+    color: #d00000;
+
+    margin-bottom: 20px;
+}
+
+.about-main-card p {
+    max-width: 900px;
+
+    margin: 0 auto 18px;
+
+    line-height: 1.9;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   ABOUT FEATURES
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+.about-feature {
+    background: #fff;
+
+    padding: 32px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.07);
+
+    border: 1px solid #eee;
+
+    transition: .35s;
+}
+
+.about-feature:hover {
+    transform: translateY(-8px);
+
+    border-color: #ffb0b0;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.11);
+}
+
+.feature-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.about-feature h3 {
+    color: #111;
+
+    margin-bottom: 12px;
+}
+
+.about-feature p {
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ABOUT SERVICES
+   ========================================================= */
+
+.about-services {
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.07);
+
+    margin-bottom: 35px;
+}
+
+.about-services h2 {
+    font-size: 30px;
+
+    color: #d00000;
+
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    color: #666;
+
+    margin-bottom: 28px;
+}
+
+.service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.service-tags span {
+    padding: 10px 17px;
+
+    background: #fff7f7;
+
+    border: 1px solid #ffd0d0;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.service-tags span:hover {
+    background: #d00000;
+
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ABOUT TRUST
+   ========================================================= */
+
+.about-trust {
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding: 45px 25px;
+
+    color: #fff;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #a00000
+        );
+
+    box-shadow:
+        0 12px 30px rgba(180,0,0,.2);
+}
+
+.trust-symbol {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.about-trust h2 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.about-trust p {
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.8;
+}
+
+.about-contact-btn {
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    background: #fff;
+
+    color: #c00000;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.about-contact-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-page {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background: #fff;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#fff,#fff) padding-box,
+        linear-gradient(
+            135deg,
+            rgba(255,0,0,.2),
+            rgba(255,170,0,.15)
+        ) border-box;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.07);
+
+    transition: .35s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    background: #fff4f4;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+.contact-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #111;
+}
+
+.contact-card p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    font-size: 14px;
+}
+
+.contact-card > a {
+    color: #d00000;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.contact-card > a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp-card {
+    border-color: #b7edc8;
+}
+
+.whatsapp-contact {
+    display: inline-block;
+
+    background: #25D366;
+
+    color: #fff !important;
+
+    padding: 11px 20px;
+
+    border-radius: 50px;
+
+    text-decoration: none !important;
+
+    transition: .3s;
+}
+
+.whatsapp-contact:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CONTACT CTA
+   ========================================================= */
+
+.contact-cta {
+    text-align: center;
+
+    padding: 50px 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #8d0000
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 12px 35px rgba(180,0,0,.2);
+
+    margin-bottom: 25px;
+}
+
+.cta-icon {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.contact-cta h2 {
+    font-size: 29px;
+
+    margin-bottom: 12px;
+}
+
+.contact-cta p {
+    max-width: 800px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.8;
+}
+
+.cta-whatsapp {
+    display: inline-block;
+
+    background: #25D366;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.cta-whatsapp:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   CONTACT NOTE
+   ========================================================= */
+
+.contact-note {
+    padding: 22px;
+
+    background: #fff8e1;
+
+    border-left: 5px solid #ff9800;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    line-height: 1.8;
+}
+
+.contact-note strong {
+    display: block;
+
+    color: #e65100;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   MOBILE ABOUT + CONTACT
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-page-hero h1,
+    .contact-page-hero h1 {
+        font-size: 34px;
+    }
+
+    .about-page-hero,
+    .contact-page-hero {
+        padding: 60px 15px;
+    }
+
+    .about-main-card {
+        padding: 30px 20px;
+    }
+
+    .about-main-card h2 {
+        font-size: 25px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-services {
+        padding: 30px 18px;
+    }
+
+    .about-trust h2 {
+        font-size: 23px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-cta h2 {
+        font-size: 24px;
+    }
+
+}
