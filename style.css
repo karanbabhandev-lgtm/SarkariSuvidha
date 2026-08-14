@@ -18,11 +18,18 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f8f9fc;
-    color: #222;
+    background: linear-gradient(
+        135deg,
+        #f7f9fc 0%,
+        #eef5f7 50%,
+        #fdf7f4 100%
+    );
+    color: #252525;
     overflow-x: hidden;
-}
 
+    font-size: 16px;
+    line-height: 1.7;
+}
 
 /* =========================================================
    ANIMATED BACKGROUND SHAPES
@@ -1940,43 +1947,122 @@ body.is-scrolling .whatsapp {
     }
 
 
-    .shape1 {
-        width: 120px;
-        height: 120px;
-    }
+    /* =========================================================
+   SOFT EYE-FRIENDLY BACKGROUND
+   ========================================================= */
 
+.animated-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 
-    .shape2 {
-        width: 70px;
-        height: 70px;
-    }
+    overflow: hidden;
+    pointer-events: none;
 
-
-    .shape3 {
-        width: 160px;
-        height: 160px;
-    }
-
-
-    .shape4 {
-        width: 90px;
-        height: 90px;
-    }
-
-
-    .shape5 {
-        width: 130px;
-        height: 130px;
-    }
-
-
-    .shape6 {
-        width: 55px;
-        height: 55px;
-    }
-
+    z-index: -1;
 }
 
+.shape {
+    position: absolute;
+
+    border: 2px solid rgba(190, 210, 220, 0.30);
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    filter: blur(0.3px);
+
+    animation:
+        softFloat 16s ease-in-out infinite;
+
+    will-change: transform;
+}
+
+.shape1 {
+    width: 180px;
+    height: 180px;
+
+    left: 4%;
+    top: 18%;
+
+    animation-duration: 18s;
+}
+
+.shape2 {
+    width: 100px;
+    height: 100px;
+
+    right: 8%;
+    top: 25%;
+
+    animation-duration: 14s;
+}
+
+.shape3 {
+    width: 240px;
+    height: 240px;
+
+    left: 45%;
+    top: 48%;
+
+    animation-duration: 22s;
+}
+
+.shape4 {
+    width: 130px;
+    height: 130px;
+
+    right: 18%;
+    top: 65%;
+
+    animation-duration: 17s;
+}
+
+.shape5 {
+    width: 190px;
+    height: 190px;
+
+    left: 8%;
+    bottom: 5%;
+
+    animation-duration: 20s;
+}
+
+.shape6 {
+    width: 75px;
+    height: 75px;
+
+    right: 4%;
+    bottom: 15%;
+
+    animation-duration: 13s;
+}
+
+
+@keyframes softFloat {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(25px, -20px) scale(1.03);
+    }
+
+    50% {
+        transform: translate(-20px, 25px) scale(0.97);
+    }
+
+    75% {
+        transform: translate(20px, 15px) scale(1.02);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
 
 /* =========================================================
    REDUCE ANIMATION FOR USERS WHO PREFER LESS MOTION
@@ -2261,4 +2347,47 @@ body.is-scrolling .live {
     .animated-bg .shape {
         opacity: .75;
     }
+}
+/* ================= BIGGER & EASY TO READ FONT ================= */
+
+body {
+    font-size: 16px;
+}
+
+nav a {
+    font-size: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.card h3 {
+    font-size: 19px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.contact p {
+    font-size: 16px;
+}
+
+.notice {
+    font-size: 15px;
+}
+
+.notice-btn {
+    font-size: 13px;
+}
+
+.title {
+    font-size: 34px;
 }
