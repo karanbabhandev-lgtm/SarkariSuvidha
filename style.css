@@ -1,4 +1,1186 @@
-/* ================= SCROLL ANIMATION CONTROL ================= */
+/* =========================================================
+   SARKARI SUVIDHA
+   COMPLETE STYLE.CSS
+   ========================================================= */
+
+
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fc;
+    color: #222;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ANIMATED BACKGROUND SHAPES
+   ========================================================= */
+
+.animated-bg {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+
+    display: block;
+
+    border: 2px solid rgba(210, 0, 0, 0.10);
+
+    border-radius: 50%;
+
+    animation-name: floatingShape;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    will-change: transform;
+}
+
+
+/* Shape 1 */
+
+.shape1 {
+    width: 180px;
+    height: 180px;
+
+    left: 4%;
+    top: 15%;
+
+    animation-duration: 13s;
+}
+
+
+/* Shape 2 */
+
+.shape2 {
+    width: 100px;
+    height: 100px;
+
+    right: 8%;
+    top: 25%;
+
+    animation-duration: 9s;
+    animation-delay: -2s;
+}
+
+
+/* Shape 3 */
+
+.shape3 {
+    width: 250px;
+    height: 250px;
+
+    left: 45%;
+    top: 45%;
+
+    animation-duration: 17s;
+    animation-delay: -5s;
+}
+
+
+/* Shape 4 */
+
+.shape4 {
+    width: 130px;
+    height: 130px;
+
+    right: 18%;
+    top: 65%;
+
+    animation-duration: 11s;
+    animation-delay: -3s;
+}
+
+
+/* Shape 5 */
+
+.shape5 {
+    width: 200px;
+    height: 200px;
+
+    left: 10%;
+    bottom: 5%;
+
+    animation-duration: 15s;
+    animation-delay: -6s;
+}
+
+
+/* Shape 6 */
+
+.shape6 {
+    width: 75px;
+    height: 75px;
+
+    right: 3%;
+    bottom: 15%;
+
+    animation-duration: 8s;
+}
+
+
+/* Shape Animation */
+
+@keyframes floatingShape {
+
+    0% {
+        transform:
+            translate(0, 0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translate(50px, -35px)
+            rotate(90deg)
+            scale(1.08);
+    }
+
+    50% {
+        transform:
+            translate(-30px, 50px)
+            rotate(180deg)
+            scale(0.92);
+    }
+
+    75% {
+        transform:
+            translate(40px, 25px)
+            rotate(270deg)
+            scale(1.05);
+    }
+
+    100% {
+        transform:
+            translate(0, 0)
+            rotate(360deg)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo h2 {
+    color: #d00000;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+}
+
+.logo p {
+    color: #777;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a {
+    position: relative;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    background: #d00000;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d00000;
+}
+
+nav a:hover::after {
+    width: 100%;
+
+    left: 0;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+    min-height: 480px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #870000
+        );
+}
+
+
+/* Hero Circle 1 */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: -150px;
+    top: -200px;
+
+    border: 1px solid rgba(255,255,255,0.20);
+
+    border-radius: 50%;
+
+    animation:
+        heroRotate 15s linear infinite;
+}
+
+
+/* Hero Circle 2 */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    bottom: -250px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 50%;
+
+    animation:
+        heroRotate 18s linear infinite reverse;
+}
+
+
+@keyframes heroRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: #ffe0e0;
+}
+
+
+.hero p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #ffffff;
+
+    color: #c00000;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.slider {
+    max-width: 1100px;
+
+    margin: 35px auto;
+
+    padding: 0 20px;
+
+    overflow: hidden;
+}
+
+
+.slides {
+    display: none;
+}
+
+
+.slides img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+}
+
+
+.fade {
+    animation: fadeEffect 1s;
+}
+
+
+@keyframes fadeEffect {
+
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-section {
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    padding: 0 20px;
+}
+
+
+#searchBox {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 2px solid #eeeeee;
+
+    border-radius: 50px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+
+#searchBox:focus {
+    border-color: #d00000;
+
+    box-shadow:
+        0 8px 25px rgba(220,0,0,0.12);
+}
+
+
+/* =========================================================
+   LATEST UPDATES
+   ========================================================= */
+
+.updates {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+}
+
+
+.updates h2 {
+    text-align: center;
+
+    color: #c00000;
+
+    margin-bottom: 18px;
+}
+
+
+.notice {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 18px;
+
+    background: #ffffff;
+
+    border-left: 4px solid #d00000;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+}
+
+
+.live {
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    background: red;
+
+    border-radius: 50%;
+
+    animation: livePulse 1.5s infinite;
+}
+
+
+@keyframes livePulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(255,0,0,0.5);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 8px rgba(255,0,0,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(255,0,0,0);
+    }
+}
+
+
+.notice-btn {
+    margin-left: auto;
+
+    padding: 7px 15px;
+
+    background: #d00000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+#services {
+    max-width: 1150px;
+
+    margin: 70px auto;
+
+    padding: 0 20px;
+}
+
+
+.title {
+    text-align: center;
+
+    color: #c00000;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.section-subtitle {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 35px;
+}
+
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* Service Card */
+
+.card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: block;
+
+    padding: 28px 20px;
+
+    background: rgba(255,255,255,0.96);
+
+    color: #222;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    transition: 0.35s;
+}
+
+
+/* Animated Card Border */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,0,0,0.30),
+            transparent
+        );
+
+    transform: translateX(-100%);
+
+    transition: 0.6s;
+
+    z-index: -1;
+}
+
+
+.card:hover::before {
+    transform: translateX(100%);
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ffb0b0;
+
+    box-shadow:
+        0 18px 35px rgba(180,0,0,0.12);
+}
+
+
+.icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.card h3 {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CUSTOMER TRUST SECTION
+   ========================================================= */
+
+.customer-trust {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 80px auto;
+
+    padding: 45px 35px;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #870000
+        );
+
+    box-shadow:
+        0 15px 40px rgba(170,0,0,0.18);
+}
+
+
+/* Animated Trust Circle */
+
+.customer-trust::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -160px;
+    left: -80px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 50%;
+
+    animation:
+        heroRotate 12s linear infinite;
+}
+
+
+.trust-inner {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.trust-icon {
+    font-size: 55px;
+}
+
+
+.trust-small {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.8;
+}
+
+
+.customer-trust h2 {
+    font-size: 30px;
+
+    margin: 5px 0;
+}
+
+
+.customer-trust p {
+    line-height: 1.7;
+
+    opacity: 0.9;
+}
+
+
+/* Trust Features */
+
+.trust-features {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+
+.trust-features div {
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 15px;
+}
+
+
+.trust-features strong {
+    font-size: 14px;
+}
+
+
+.trust-features small {
+    opacity: 0.75;
+}
+
+
+.trust-button {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #ffffff;
+
+    color: #c00000;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.trust-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about {
+    max-width: 900px;
+
+    margin: 70px auto;
+
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+
+.about h2,
+.contact h2 {
+    color: #c00000;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+
+.about p {
+    color: #666;
+
+    line-height: 1.9;
+}
+
+
+.read-more,
+.contact-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 11px 22px;
+
+    background: #d00000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.read-more:hover,
+.contact-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(200,0,0,0.20);
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.contact {
+    max-width: 800px;
+
+    margin: 70px auto;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+
+.contact p {
+    margin: 10px;
+
+    color: #666;
+}
+
+
+.contact p a {
+    color: #c00000;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+   ========================================================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    z-index: 999;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.20);
+
+    animation:
+        whatsappPulse 2s infinite;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0.50);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 15px rgba(37,211,102,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+#topBtn {
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 42px;
+    height: 42px;
+
+    display: none;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d00000;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 998;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.20);
+}
+
+
+#topBtn:hover {
+    transform: translateY(-3px);
+
+    background: #a80000;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 70px;
+
+    padding: 25px;
+
+    background: #171717;
+
+    color: #aaaaaa;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION PAUSE
+   ========================================================= */
+
+/*
+   जब user scroll करेगा तो JavaScript
+   body में "is-scrolling" class लगाएगा।
+
+   इससे सभी moving animations रुक जाएंगी।
+*/
 
 body.is-scrolling .shape,
 body.is-scrolling .hero::before,
@@ -9,12 +1191,596 @@ body.is-scrolling .whatsapp {
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-page-hero,
+.contact-page-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 75px 20px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #850000
+        );
+}
+
+
+.about-page-hero h1,
+.contact-page-hero h1 {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+.about-page-hero p,
+.contact-page-hero p {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.page-badge {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    padding: 9px 20px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.about-page,
+.contact-page {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+}
+
+
+/* About Main Card */
+
+.about-main-card {
+    background: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    border: 2px solid #f1d0d0;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.08);
+
+    margin-bottom: 35px;
+
+    transition: 0.35s;
+}
+
+
+.about-main-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+}
+
+
+.about-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff4f4;
+
+    border-radius: 50%;
+
+    font-size: 38px;
+}
+
+
+.about-main-card h2 {
+    color: #d00000;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-main-card p {
+    max-width: 900px;
+
+    margin: 0 auto 18px;
+
+    color: #555;
+
+    line-height: 1.9;
+}
+
+
+/* About Feature Grid */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+.about-feature {
+    background: #ffffff;
+
+    padding: 32px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.35s;
+}
+
+
+.about-feature:hover {
+    transform: translateY(-8px);
+
+    border-color: #ffb0b0;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.11);
+}
+
+
+.feature-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-feature h3 {
+    margin-bottom: 12px;
+}
+
+
+.about-feature p {
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* About Services */
+
+.about-services {
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    margin-bottom: 35px;
+}
+
+
+.about-services h2 {
+    color: #d00000;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.about-subtitle {
+    color: #666;
+
+    margin-bottom: 28px;
+}
+
+
+.service-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.service-tags span {
+    padding: 10px 17px;
+
+    background: #fff7f7;
+
+    border: 1px solid #ffd0d0;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.service-tags span:hover {
+    background: #d00000;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* About Trust */
+
+.about-trust {
+    text-align: center;
+
+    padding: 45px 25px;
+
+    color: #ffffff;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #a00000
+        );
+
+    box-shadow:
+        0 12px 30px rgba(180,0,0,0.20);
+}
+
+
+.trust-symbol {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.about-trust h2 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+
+.about-trust p {
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.8;
+}
+
+
+.about-contact-btn {
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    background: #ffffff;
+
+    color: #c00000;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.about-contact-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.20);
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+.contact-card {
+    background: #ffffff;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 2px solid #f1d0d0;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition: 0.35s;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+}
+
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    background: #fff4f4;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+
+.contact-card h3 {
+    color: #111;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    font-size: 14px;
+}
+
+
+.contact-card > a {
+    color: #d00000;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.contact-card > a:hover {
+    text-decoration: underline;
+}
+
+
+/* WhatsApp Contact */
+
+.whatsapp-card {
+    border-color: #b7edc8;
+}
+
+
+.whatsapp-contact {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    background: #25D366;
+
+    color: #ffffff !important;
+
+    border-radius: 50px;
+
+    text-decoration: none !important;
+
+    transition: 0.3s;
+}
+
+
+.whatsapp-contact:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+/* Contact CTA */
+
+.contact-cta {
+    text-align: center;
+
+    padding: 50px 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 22px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #8d0000
+        );
+
+    box-shadow:
+        0 12px 35px rgba(180,0,0,0.20);
+}
+
+
+.cta-icon {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+
+.contact-cta h2 {
+    font-size: 29px;
+
+    margin-bottom: 12px;
+}
+
+
+.contact-cta p {
+    max-width: 800px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.8;
+}
+
+
+.cta-whatsapp {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.cta-whatsapp:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.25);
+}
+
+
+.contact-note {
+    padding: 22px;
+
+    background: #fff8e1;
+
+    border-left: 5px solid #ff9800;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    line-height: 1.8;
+}
+
+
+.contact-note strong {
+    display: block;
+
+    color: #e65100;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 900px) {
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .hero h1 {
@@ -24,72 +1790,207 @@ body.is-scrolling .whatsapp {
 }
 
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
 
     .container {
         flex-direction: column;
+
         gap: 12px;
     }
 
+
     nav {
         gap: 15px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
+
+
+    .logo {
+        text-align: center;
+    }
+
 
     .hero {
         min-height: 420px;
     }
 
+
     .hero h1 {
         font-size: 32px;
     }
+
 
     .hero p {
         font-size: 14px;
     }
 
+
+    .hero-badge {
+        font-size: 10px;
+    }
+
+
     .slides img {
         height: 190px;
     }
+
 
     .notice {
         flex-wrap: wrap;
     }
 
+
     .notice-btn {
         margin-left: 0;
     }
+
 
     .service-grid {
         grid-template-columns: 1fr;
     }
 
+
     .customer-trust {
         margin: 50px 15px;
+
         padding: 35px 20px;
     }
+
 
     .trust-inner {
         flex-direction: column;
     }
 
+
     .customer-trust h2 {
         font-size: 24px;
     }
+
 
     .trust-features {
         grid-template-columns: 1fr;
     }
 
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-main-card {
+        padding: 30px 20px;
+    }
+
+
+    .about-services {
+        padding: 30px 18px;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+
+    .about-page-hero h1,
+    .contact-page-hero h1 {
+        font-size: 34px;
+    }
+
+
+    .about-page-hero,
+    .contact-page-hero {
+        padding: 60px 15px;
+    }
+
+
+    .about-trust h2 {
+        font-size: 23px;
+    }
+
+
+    .contact-cta h2 {
+        font-size: 24px;
+    }
+
+
     .whatsapp {
         right: 18px;
+
         bottom: 18px;
     }
 
+
     #topBtn {
         right: 18px;
+
         bottom: 85px;
+    }
+
+
+    .shape1 {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .shape2 {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .shape3 {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .shape4 {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .shape5 {
+        width: 130px;
+        height: 130px;
+    }
+
+
+    .shape6 {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION FOR USERS WHO PREFER LESS MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .shape,
+    .hero::before,
+    .hero::after,
+    .customer-trust::before,
+    .whatsapp,
+    .live {
+        animation: none !important;
     }
 
 }
