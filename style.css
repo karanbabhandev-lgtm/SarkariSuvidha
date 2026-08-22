@@ -1230,3 +1230,38 @@ body.is-scrolling .live{
         animation:none!important;
     }
 }
+.service-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+.service-card .icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #008f39;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.service-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #fff;
+    color: red;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
