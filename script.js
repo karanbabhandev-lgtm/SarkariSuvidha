@@ -183,5 +183,5 @@ window.addEventListener(
             "page-loaded"
         );
 
-    }
+    } 
 );
