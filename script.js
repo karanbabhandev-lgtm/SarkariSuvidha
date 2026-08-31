@@ -185,3 +185,22 @@ window.addEventListener(
 
     }
 );
+
+
+/* =========================================================
+   DYNAMIC FOOTER YEAR
+   ========================================================= */
+
+(function () {
+
+    const yearEl =
+        document.getElementById("currentYear");
+
+    if (yearEl) {
+
+        yearEl.textContent =
+            new Date().getFullYear();
+
+    }
+
+})();
