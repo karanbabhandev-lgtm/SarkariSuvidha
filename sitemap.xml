@@ -1,52 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Government Jobs -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/jobs.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- About -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/about.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contact -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/contact.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Disclaimer -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/disclaimer.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Privacy Policy -->
-  <url>
-    <loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/privacy-policy.html</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
+<!--  Homepage  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<!--  Government Jobs  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/jobs.html</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<!--  About  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/about.html</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Contact  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/contact.html</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<!--  Disclaimer  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/disclaimer.html</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<!--  Privacy Policy  -->
+<url>
+<loc>https://karanbabhandev-lgtm.github.io/SarkariSuvidha/privacy-policy.html</loc>
+<lastmod>2026-09-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
 </urlset>
