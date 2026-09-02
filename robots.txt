@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://karanbabhandev-lgtm.github.io/Bihar-Online-Services-Portal/sitemap.xml
+Sitemap: https://karanbabhandev-lgtm.github.io/SarkariSuvidha/sitemap.xml
